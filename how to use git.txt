@@ -1,0 +1,17 @@
+How to use git
+
+git的使用方法就是按照网上廖雪峰老师的教程走的。如果让我教自己怎么用的话。。
+
+1、下载git。外网下载太慢建议直接从360软件下。
+2、创建SSH Key。在Git Bash命令行输入'ssh-keygen -t rsa -C "youremail@example.com"'，记得邮箱换成自己的。系统中会生成.ssh目录，其中包括id_rsa和id_rsa.pub两个文件。
+3、添加SSH Key。在github账户设置“SSH keys”页面中添加上一步得到的id_rsa.pub文件中的内容（记得用notepad打开哦）。
+4、在GitHub新建repo。登录GitHub点击右上角“Create a new repo”按钮创建新仓库，repo名字改成本地仓库名，其他设置保持默认。
+5、关联本地仓库。在本地的仓库下运行命令"git remote add origin git@github.com:zhangkaka2017/learngit.git"
+6、推送内容（push）。在Git Bash命令行输入“git push -u origin master”。因为是远程库是空的，我们第一次推送master分支时，加上了-u参数。后续推送只需要“git push origin master”。
+
+下面是git常用功能简介
+1、git add：添加文件到仓库缓存区。
+2、git commit：在添加文件后，将文件提交到仓库。
+3、git merge：git branch xxx或者git checkout -b xxx创建分支，在完成分支任务后git checkout nnn切回nnn分支，最后git merge xxx将xxx分支合并到nnn分支。
+4、git push：推送本地仓库内容到远程仓库。
+5、git pull：尚未研究TT-TT
